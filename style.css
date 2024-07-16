@@ -15,6 +15,12 @@
 .bg-light {
   background-color: rgba(255, 144, 14, 0.1);
 }
+.dark-1 {
+  color: rgb(19, 19, 19);
+}
+.dark-3 {
+  color: rgb(114, 114, 114);
+}
 
 .btn-primary {
   background-color: #ff900e;
@@ -32,6 +38,14 @@
   background-color: white;
   color: #ff900e;
   border: 1.5px solid #ff900e;
+}
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+main > section {
+  margin-top: 85px;
 }
 
 /* header style  */
@@ -76,6 +90,37 @@
   width: 100%;
 }
 
+/* teams and features style  */
+
+.teams {
+  align-items: center;
+}
+.team-img-container {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.team-img-container img {
+  width: 100%;
+}
+
+.our-features {
+  max-width: 480px;
+  margin-left: 50px;
+}
+#feature-color {
+  color: #ff900e;
+}
+.feature-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.feature-describtion {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
 /* small device responsive media query here  */
 
 /* header responsive */
@@ -83,5 +128,19 @@
   .navbar,
   .nav-links {
     flex-direction: column;
+  }
+
+  /* feature section responsive */
+
+  .teams {
+    flex-direction: column;
+  }
+  .team-img-container {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 auto;
+  }
+  .our-features {
+    max-width: 300px;
+    margin-left: 0;
   }
 }
