@@ -164,9 +164,33 @@ main > section {
 .fact-icon {
   width: 30%;
 }
+
+/* sopnsor relatate style here */
+.sponsor-info {
+  max-width: 500px;
+  margin: 50px auto;
+  text-align: center;
+}
+.sponsor-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+.sponsor-company {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.sponsor-company img {
+  width: 100px;
+  margin-bottom: 80px;
+  /* filter: grayscale(100%); */
+}
+
+/* ** */
+
 /* small device responsive media query here  */
 
-/* header responsive */
 @media screen and (max-width: 576px) {
   .navbar,
   .nav-links {
@@ -177,7 +201,8 @@ main > section {
     flex-direction: column;
   }
   .team-img-container,
-  .fact-container {
+  .fact-container,
+  .sponsor-company {
     grid-template-columns: repeat(1, 1fr);
     margin: 0 auto;
   }
