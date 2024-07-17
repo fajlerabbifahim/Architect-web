@@ -119,9 +119,68 @@ main > section {
   color: #ff900e;
 }
 
-.feature-describtion {
+.team-describtion {
   font-size: 0.9rem;
   font-weight: 400;
+}
+
+/* feature relatate style  */
+
+.features {
+  gap: 80px;
+}
+
+#feature-title {
+  border-left: 5px solid #ff900e;
+  padding-left: 10px;
+}
+
+.feature-card {
+  padding: 30px;
+  margin-bottom: 15px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  border-radius: 8px;
+  max-width: 600px;
+}
+
+.feature-section-describtion {
+  max-width: 720px;
+}
+
+.feature-card .feature-card-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.features,
+p,
+.feature-card-describtion {
+  font-size: 0.9rem;
+}
+.feature-img img {
+  width: 100%;
+}
+
+.feature-badge {
+  padding: 30px 20px;
+  background-color: #ff900e;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  margin-top: -100px;
+  margin-left: -100px;
+}
+.feature-badge #badge-title {
+  font-size: 2rem;
+  color: white;
+  font-weight: 800;
+}
+.feature-badge span {
+  color: white;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 /* fact section style here  */
@@ -193,13 +252,12 @@ main > section {
 
 @media screen and (max-width: 576px) {
   .navbar,
-  .nav-links {
-    flex-direction: column;
-  }
-
+  .nav-links,
+  .features,
   .teams {
     flex-direction: column;
   }
+
   .team-img-container,
   .fact-container,
   .sponsor-company {
@@ -217,14 +275,37 @@ main > section {
   .fact-describtion {
     text-align: center;
   }
+  .feature-badge,
+  .nav-links {
+    display: none;
+  }
 }
 
 /* medium device responsive */
 @media screen and (min-width: 576px) and (max-width: 992px) {
-  .teams {
+  .teams,
+  .features {
     flex-direction: column;
   }
   .our-features {
     margin: 50px auto;
+  }
+  .fact-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .fact-container {
+    margin: 0 130px;
+  }
+  .feature-badge {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .feature-section-describtion,
+  .feature-card {
+    text-align: center;
+    margin-left: 30px;
+  }
+  #feature-section-title {
+    margin-left: 30px;
   }
 }
